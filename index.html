@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTS - O amor não tem distância</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Nexo Cuidado</h1>
+        <p>O amor não tem distância</p>
+    </header>
+
+    <main>
+        <!-- HISTÓRICO E IMAGEM DA EMPRESA -->
+        <section class="container" id="sobre">
+            <div class="description-box">
+                <h2>Nossa História</h2>
+                <p>
+                    Fundada em 2026, a <strong>RTS</strong> nasceu do desejo de conectar famílias através do cuidado. 
+                    Nossa missão é utilizar a tecnologia para encurtar distâncias, permitindo que filhos, pais e cuidadores 
+                    acompanhem a saúde de seus entes queridos em tempo real. Acreditamos que o amor não tem distância, 
+                    e a tecnologia é a nossa principal ferramenta para provar isso todos os dias.
+                </p>
+            </div>
+        
+        </section>
+
+        <!-- PRODUTOS E SERVIÇOS -->
+        <section class="container" id="produtos">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Termômetro Digital e Saúde">
+            </div>
+
+            <div class="description-box">
+                <h2>Nossos Produtos e Serviços</h2>
+                <h3>Termômetro Digital Inteligente</h3>
+                <p>
+                    Monitore a temperatura de quem você ama através do nosso aplicativo, em tempo real, 
+                    não importa onde você esteja. Porque quando o assunto é saúde e família, a distância é apenas um detalhe.
+                </p>
+                
+                <h3>Serviço de Alertas Premium</h3>
+                <p>
+                    Assine nosso serviço mensal para receber ligações automáticas de emergência caso a temperatura 
+                    do paciente atinja níveis críticos, além de relatórios semanais de saúde.
+                </p>
+
+                <button onclick="medirTemperatura()" id="btn-medir">Simular Leitura no App</button>
+                
+                <div id="resultado-container" class="oculto">
+                    <p id="resultado-temperatura"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EQUIPE DE DESENVOLVIMENTO -->
+        <section class="team-container" id="equipe">
+            <h2>Nossa Equipe</h2>
+            <p>Conheça os desenvolvedores por trás da RTS.</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="img/lucas.jpg.jpeg" alt="Lucas de Oliveira da Silva">
+                    <h3>Lucas de Oliveira da Silva</h3>
+                    <p>RA: 326101342</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/matheus.jpg.jpeg" alt="Matheus Dias Alcasa">
+                    <h3>Matheus Dias Alcasa</h3>
+                    <p>RA: 2126101580</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/daniel.jpg.jpeg" alt="Daniel Carmona Reche">
+                    <h3>Daniel Carmona Reche</h3>
+                    <p>RA: 326101146</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/jeferson.jpg.jpeg" alt="Jeferson Borges Nogueira">
+                    <h3>Jeferson Borges Nogueira</h3>
+                    <p>RA: 326101096</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/guilherme.jpg.jpeg" alt="Guilherme Sousa Santos">
+                    <h3>Guilherme Sousa Santos</h3>
+                    <p>RA: 326101781</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/valdir.jpg.jpeg" alt="Valdir Calasans dos Santos Filho">
+                    <h3>Valdir Calasans dos Santos Filho</h3>
+                    <p>RA: 2126101897</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/norberto.jpg.jpeg" alt="Norberto Augusto Rocha">
+                    <h3>Norberto Augusto Rocha</h3>
+                    <p>RA: 326101216</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/renato.jpg.jpeg" alt="Renato Oliveira Domingues">
+                    <h3>Renato Oliveira Domingues</h3>
+                    <p>RA: 326101822</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/marcos.jpg.jpeg" alt="Marcos Roger Carvalho Sanches">
+                    <h3>Marcos Roger Carvalho Sanches</h3>
+                    <p>RA: 326100232</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/murilo.jpg.jpeg" alt="Murilo Farias Trancoso">
+                    <h3>Murilo Farias Trancoso</h3>
+                    <p>RA: 326100613</p>
+                </div>
+                <div class="team-member">
+                    <!-- Usando um avatar genérico pois não há foto -->
+                    <img src="img/gabriel.jpg.jpeg" alt="Gabriel Alves de Jesus">
+                    <h3>Gabriel Alves de Jesus</h3>
+                    <p>RA: 326101679</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULÁRIO DE CONTATO COM API DE CEP -->
+        <section class="form-container" id="contato">
+            <h2>Fale Conosco</h2>
+            <p>Preencha o formulário abaixo para contato ou suporte.</p>
+            
+            <form id="form-contato">
+                <div class="input-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Ex: João da Silva" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Ex: joao@email.com" required>
+                </div>
+
+                <!-- Campos para a API de CEP -->
+                <div class="input-group">
+                    <label for="cep">CEP (Digite para buscar o endereço)</label>
+                    <input type="text" id="cep" placeholder="Ex: 01001000" maxlength="8" required>
+                </div>
+
+                <div class="address-grid">
+                    <div class="input-group">
+                        <label for="rua">Rua/Logradouro</label>
+                        <input type="text" id="rua" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" id="bairro" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label for="estado">Estado (UF)</label>
+                        <input type="text" id="estado" readonly>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+
+            <div id="mensagem-form" class="oculto"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto de ADS - Termômetro Digital RTS &copy; 2026</p>
+    </footer>
+
+</body>
+</html>
